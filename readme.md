@@ -30,8 +30,8 @@ gulp.task('build', function () {
 ### Available Options
 
  - `buildDir`, target build directory. Default is `build` in `src`
- - `sdk`, Target SDK for this project
- - `target`, Build target
+ - `scheme`, Xcode project build scheme
+ - `configuration`, Xcode build configuration
 
 ## License
 
