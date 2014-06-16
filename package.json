@@ -1,0 +1,30 @@
+{
+  "name": "gulp-spawn-xcodebuild",
+  "version": "1.0.0",
+  "description": "Compiles xcode project with gulp",
+  "main": "lib/index.js",
+  "keywords": [
+    "gulpplugin",
+    "xcodebuild",
+    "spawn"
+  ],
+  "author": {
+    "name": "Maythee Anegboonlap",
+    "email": "null@llun.in.th"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.8.0",
+    "lodash": "^2.4.1",
+    "through2": "^0.5.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1",
+    "sinon": "^1.10.2",
+    "sinon-chai": "^2.5.0"
+  },
+  "scripts": {
+    "test": "mocha specs"
+  }
+}
