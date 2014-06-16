@@ -90,17 +90,4 @@ describe('gulp-spawn-xcodebuild', function () {
       [ 'BUILD_DIR=path/release' ])
   })
 
-  it ('should pass path to another pipe', function (done) {
-    var stream = xcodebuild()
-
-    stream.pipe(through2.obj(function (chunk, enc, callback) {
-      expect(chunk).to.equal('path')
-
-      callback()
-      done()
-    }))
-
-    stream.write('path')
-  })
-
 })

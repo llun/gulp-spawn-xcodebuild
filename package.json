@@ -1,6 +1,6 @@
 {
   "name": "gulp-spawn-xcodebuild",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compiles xcode project with gulp",
   "main": "lib/index.js",
   "keywords": [
@@ -13,8 +13,13 @@
     "email": "null@llun.in.th"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/llun/gulp-spawn-xcodebuild.git"
+  },
   "dependencies": {
     "gulp": "^3.8.0",
+    "gulp-util": "^2.2.17",
     "lodash": "^2.4.1",
     "through2": "^0.5.1"
   },
