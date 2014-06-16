@@ -1,6 +1,6 @@
 {
   "name": "gulp-spawn-xcodebuild",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compiles xcode project with gulp",
   "main": "lib/index.js",
   "keywords": [

@@ -11,44 +11,15 @@ describe('gulp-spawn-xcodebuild', function () {
 
   beforeEach(function () {
     sinon.stub(proc, 'spawn')
-    proc.spawn.returns({
-      stdin: sinon.stub(through2()),
-      stdout: sinon.stub(through2()),
-      stderr: sinon.stub(through2()),
-      on: sinon.stub(),
-      once: sinon.stub()
-    })
+
+    var mock = sinon.stub(through2())
+    mock.stdin = mock.stdout = mock.stderr = sinon.stub(through2())
+    proc.spawn.returns(mock)
 
   })
 
   afterEach(function () {
     proc.spawn.restore()
-  })
-
-  it ('should spawn xcodebuild for each path', function () {
-    var paths = [ 'path1', 'path2' ]
-      , stream = xcodebuild()
-
-    paths.forEach(function (path) {
-      stream.write({ path: path })
-      expect(proc.spawn).to.have.been.calledWith('xcodebuild',
-        [ 'BUILD_DIR=' + path + '/build' ],
-        {
-          cwd: path
-        })
-    })
-
-  })
-
-  it ('should pass string as path', function () {
-    var stream = xcodebuild()
-    stream.write('path')
-
-    expect(proc.spawn).to.have.been.calledWith('xcodebuild',
-      [ 'BUILD_DIR=path/build' ],
-      {
-        cwd: 'path'
-      })
   })
 
   it ('should put clean action in spawn argument', function () {
